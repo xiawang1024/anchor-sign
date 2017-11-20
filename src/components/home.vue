@@ -19,7 +19,7 @@
 				时间：2017年11月23日上午9:00——12:00 
 			</p>
 			<p class="param">
-				地点：广播大厦16楼大会议室。 
+				地点：广播大厦24楼会议室。 
 			</p>
 		</div>
 		<button class="btn" @click="goSubmit">报名参加</button>
