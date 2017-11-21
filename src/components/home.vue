@@ -59,7 +59,7 @@ export default {
 		mobile:'',
 		openId:'',
 		disabled:false,
-		msg:'<h1>报名成功（请准时参加）</h1><p>时间：11月23日上午9:00</p><p>地点：广播大厦16楼大会议室</p>',
+		msg:'<h1>报名成功（请准时参加）</h1><p>时间：11月23日上午9:00</p><p>地点：广播大厦24楼会议室</p>',
 		isShow:false
     }
   },
@@ -123,7 +123,7 @@ export default {
 				this.disabled = true;
 				let data = res.data
 				if(data.status == 1) {	
-					this.msg='<h1>报名成功（请准时参加）</h1><p>时间：11月23日上午9:00</p><p>地点：广播大厦16楼大会议室</p>'				
+					this.msg='<h1>报名成功（请准时参加）</h1><p>时间：11月23日上午9:00</p><p>地点：广播大厦24楼大会议室</p>'				
 					this.isShow = true
 					setTimeout(() => {
 						this.disabled = false
@@ -131,7 +131,7 @@ export default {
                         this.$nextTick(() => {
 
                         })
-                    },3000)
+                    },5000)
 				}else{
 					this.msg = '<h1>报名失败：</h1><p>该微信已经报过名！</p>'
 					this.isShow = true
@@ -145,7 +145,15 @@ export default {
 				}
 				
 			}).catch(() => {
-				
+				this.msg = '<h1>报名失败：</h1><p>网络错误，请再试！</p>'
+					this.isShow = true
+					setTimeout(() => {
+						this.disabled = false
+                        this.isShow = false
+                        this.$nextTick(() => {
+
+                        })
+                    },3000)
 			})
             
 		},
