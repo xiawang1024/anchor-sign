@@ -186,6 +186,7 @@ export default {
 	bottom 0
 	left 0
 	width 750px
+	margin 0 auto
 	height 100%
 	background url('./bg.jpg') center center no-repeat
 	background-size cover
